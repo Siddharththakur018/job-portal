@@ -42,9 +42,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setLoading(true);
     try {
       const res = await api.post("/auth/login", { email, password });
+      if(!res.data?.user){
+         throw new Error("Invalid credentials");
+      }
       setUser(res.data.user);
     } catch (error) {
       setUser(null)
+      throw error;  
     } finally {
       setLoading(false);
     }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useAuth } from "../../../context/AuthContext";
 import Loader from "../../../components/Loader";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const { register, login } = useAuth();
@@ -17,9 +18,12 @@ const Login = () => {
     try {
       setLoading(true);
       await login(email, password);
+      toast.success("Login successful!");
       navigate("/");
-    } catch (error) {
-      console.error(error);
+    } catch (error: any) {
+      toast.error("Invalid credentials");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -28,7 +32,7 @@ const Login = () => {
       setLoading(true);
       await register(name, email, password, activeTab.toLowerCase());
       alert("OTP sent to your email. Please verify.");
-      setAuthMode("login"); 
+      setAuthMode("login");
       setName("");
       setEmail("");
       setPassword("");
