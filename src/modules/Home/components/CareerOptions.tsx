@@ -1,11 +1,11 @@
 
 
 const CareerOptions = () => {
-    const data = [
-        {
+    // const data = [
+    //     {
             
-        }
-    ]
+    //     }
+    // ]
   return (
     <>
     <div>

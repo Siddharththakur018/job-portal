@@ -132,9 +132,9 @@ const Login = () => {
             onClick={() =>
               setAuthMode(authMode === "login" ? "signup" : "login")
             }
-            className="text-blue-500 cursor-pointer ml-1 font-semibold"
+            className="text-blue-700 cursor-pointer ml-1 font-semibold"
           >
-            {authMode === "login" ? "Signup" : "Login"}
+            {authMode === "login" ? "Create an Account" : "Login"}
           </span>
         </p>
       </div>
