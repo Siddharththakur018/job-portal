@@ -19,7 +19,7 @@ const Home = () => {
             powered matching platform. Your next career move is just a click
             away.
           </p>
-          <div className="mt-4 shadow-xl py-5 px-4 rounded-md border border-gray-100 flex">
+          <div className="mt-4 shadow-xl py-2 px-6 rounded-full border border-gray-100 flex">
             <div className="flex items-center gap-4">
               <Search size={20} className="text-gray-400" />
               <input
@@ -37,9 +37,9 @@ const Home = () => {
                 placeholder="City or Remote"
               />
             </div>
-            <button className="flex items-center gap-2 bg-brand-blue border border-transparent hover:border-brand-blue hover:text-brand-blue hover:bg-white cursor-pointer duration-700 transition text-white py-3 px-4 rounded-md font-md">
+            <button className="flex items-center gap-2 bg-brand-blue border border-transparent cursor-pointer duration-700 text-white py-3 px-4 rounded-full font-md">
               <Search size={20} />
-              Search
+              Search Jobs
             </button>
           </div>
         </div>
