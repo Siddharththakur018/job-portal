@@ -47,7 +47,7 @@ const Home = () => {
       <div className="mb-5">
         <LeftSlider />
       </div>
-      <div className="max-w-7xl mx-auto 2xl:max-w-[1600px] mt-10">
+      <div className="bg-gray-100 py-4">
         <Steps />
       </div>
       <div className="max-w-7xl mx-auto 2xl:max-w-[1600px] mt-10">

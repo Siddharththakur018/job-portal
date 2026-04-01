@@ -45,6 +45,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       if(!res.data?.user){
          throw new Error("Invalid credentials");
       }
+      localStorage.setItem("token", res.data.token);
       setUser(res.data.user);
     } catch (error) {
       setUser(null)
@@ -74,6 +75,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setLoading(true);
     try {
       await api.post("/auth/logout");
+      localStorage.removeItem("token");
       setUser(null);
     } catch (error) {
       throw error;

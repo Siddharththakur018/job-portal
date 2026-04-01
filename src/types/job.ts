@@ -13,6 +13,18 @@ export interface Job {
   tags: string[];
   status: "open" | "closed";
   postedBy: string;
+  category: string;
   createdAt: string;
   updatedAt: string;
 }
+
+
+
+export type Category =
+  | "Tech"
+  | "Marketing"
+  | "Design"
+  | "Finance"
+  | "Sales"
+  | "HR"
+  | "Operations";
